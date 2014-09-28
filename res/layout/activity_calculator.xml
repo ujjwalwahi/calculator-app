@@ -2,27 +2,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:padding="10dp"
+    android:background="#f5f5f5"
     android:orientation="vertical" >
 
     <TextView
         android:id="@+id/expr_history"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"    
-        android:gravity="right"    
-        android:textSize="25sp"
-        android:singleLine="true" />
+        android:layout_weight="3"
+        android:background="#d1d1d1"
+        android:gravity="right"
+        android:singleLine="true"
+        android:textSize="25sp" />
 
     <TextView
         android:id="@+id/expr_n_result"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
         android:layout_weight="4"
+        android:background="#d1d1d1"
+        android:gravity="right"
         android:hint="@string/result"
-        android:gravity="right"   
-        android:textSize="40sp"
-        android:singleLine="true" 
-        />
+        android:singleLine="true"
+        android:textSize="40sp" />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -35,16 +39,19 @@
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:text="@string/button_bin"            
-             />
+            android:background="@layout/operator_pad"
+            android:text="@string/button_bin" />
 
         <Button
             android:id="@+id/button_oct"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
+            android:background="@layout/operator_pad"
             android:text="@string/button_oct" />
 
         <Button
@@ -52,7 +59,9 @@
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
+            android:background="@layout/operator_pad"
             android:text="@string/button_hex" />
 
         <Button
@@ -61,6 +70,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@layout/operator_pad"
             android:text="@string/button_divide" />
     </LinearLayout>
 
@@ -75,7 +85,9 @@
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
+            android:background="@layout/numeric_pad"
             android:text="@string/button_seven" />
 
         <Button
@@ -83,7 +95,9 @@
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
+            android:background="@layout/numeric_pad"
             android:text="@string/button_eight" />
 
         <Button
@@ -91,7 +105,9 @@
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
+            android:background="@layout/numeric_pad"
             android:text="@string/button_nine" />
 
         <Button
@@ -100,12 +116,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@layout/operator_pad"
             android:text="@string/button_multiply" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
         android:layout_weight="1"
         android:orientation="horizontal" >
 
@@ -114,7 +132,9 @@
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
+            android:background="@layout/numeric_pad"
             android:text="@string/button_four" />
 
         <Button
@@ -122,7 +142,9 @@
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
+            android:background="@layout/numeric_pad"
             android:text="@string/button_five" />
 
         <Button
@@ -130,7 +152,9 @@
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
+            android:background="@layout/numeric_pad"
             android:text="@string/button_six" />
 
         <Button
@@ -139,6 +163,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@layout/operator_pad"
             android:text="@string/button_subtract" />
     </LinearLayout>
 
@@ -153,7 +178,9 @@
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
+            android:background="@layout/numeric_pad"
             android:text="@string/button_one" />
 
         <Button
@@ -161,7 +188,9 @@
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
+            android:background="@layout/numeric_pad"
             android:text="@string/button_two" />
 
         <Button
@@ -169,7 +198,9 @@
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
+            android:background="@layout/numeric_pad"
             android:text="@string/button_three" />
 
         <Button
@@ -178,6 +209,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@layout/operator_pad"
             android:text="@string/button_add" />
     </LinearLayout>
 
@@ -192,7 +224,9 @@
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
+            android:background="@layout/numeric_pad"
             android:text="@string/button_zero" />
 
         <Button
@@ -200,7 +234,9 @@
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
+            android:background="@layout/numeric_pad"
             android:text="@string/button_dot" />
 
         <Button
@@ -208,8 +244,11 @@
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:text="@string/button_clear" />
+            android:background="@layout/numeric_pad"
+            android:text="@string/button_clear"
+            android:textColor="#f00" />
 
         <Button
             android:id="@+id/button_equal"
@@ -217,7 +256,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/button_equal" />
+            android:background="@layout/equal_button"
+            android:text="@string/button_equal"
+            android:textColor="#fff" />
     </LinearLayout>
 
 </LinearLayout>
