@@ -82,18 +82,30 @@ public class CalculatorActivity extends ActionBarActivity {
 	private OnClickListener evaluateListener = new OnClickListener() {
 
 		@Override
-		public void onClick(View v) {
+		public void onClick(View v) {		    
 			Double result = evaluate();
 			String resultToPrint = "";
-			if (result.intValue() == result) {
-				Integer intResult = result.intValue();
-				resultToPrint = intResult.toString();
+			if(!result.isNaN()) {
+				if (result.intValue() == result) {
+					Integer intResult = result.intValue();
+					resultToPrint = intResult.toString();
+				} else {
+					resultToPrint = result.toString();
+				}				
+				clear(false);								
 			} else {
-				resultToPrint = result.toString();
+				resultToPrint = "NaN";
+				typist(expr_n_result, "NaN", false);
+				clear(false);				
 			}
+			
 			typist(expr_n_result, resultToPrint, false);
 			clear(false);
-			expr_number = resultToPrint;
+			if(!result.isNaN() && result != 0) {
+				expr_number = resultToPrint;
+			}
+			
+			
 		}
 	};
 
@@ -151,10 +163,12 @@ public class CalculatorActivity extends ActionBarActivity {
 							result = a * b;
 							break;
 						case '÷':
-							if (b != 0) {
+							if(b != 0) {
 								result = a / b;
+							} else {
+								result = Double.NaN;
 							}
-
+							
 							break;
 						}
 
@@ -163,7 +177,7 @@ public class CalculatorActivity extends ActionBarActivity {
 
 			}
 		} catch (Exception ex) {
-			// handle exceptions here
+			result = Double.NaN;
 		}
 		return result;
 	}
